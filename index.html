@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TTCL 2026: Towards Test-Time Continual Learning Agents — NeurIPS 2026 Workshop</title>
+  <meta name="description" content="TTCL 2026: Towards Test-Time Continual Learning Agents. A NeurIPS 2026 workshop on agents that keep learning after deployment — uniting test-time, continual, and agentic learning. Atlanta, December 2026.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23f4efe4%22/><text x=%2250%22 y=%2272%22 font-size=%2260%22 font-family=%22Georgia%22 font-weight=%22bold%22 text-anchor=%22middle%22 fill=%22%23bf3b1b%22>T</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ======================= MASTHEAD ======================= -->
+  <nav class="masthead" id="masthead">
+    <a class="masthead-brand" href="#top">TTCL&#8202;/&#8202;2026</a>
+    <button class="masthead-toggle" aria-label="Toggle navigation" onclick="document.getElementById('masthead').classList.toggle('open')">Menu</button>
+    <ul class="masthead-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#cfp">Papers</a></li>
+      <li><a href="#dates">Dates</a></li>
+      <li><a href="#challenge">Challenge</a></li>
+      <li><a href="#speakers">Speakers</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#organizers">Organizers</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ======================= HERO ======================= -->
+  <header class="hero" id="top">
+    <p class="dateline">
+      <span>NeurIPS 2026 Workshop</span>
+      <span>Atlanta, Georgia</span>
+      <span>December 12 or 13, 2026</span>
+      <span>In&nbsp;person</span>
+    </p>
+    <h1 class="hero-title">
+      Towards <em>Test&#8209;Time Continual Learning</em> Agents
+    </h1>
+    <p class="hero-lede">
+      Toward agents that keep learning after deployment — uniting test&#8209;time,
+      continual, and agentic learning.
+    </p>
+    <div class="hero-actions">
+      <a class="btn" href="#cfp">Call for Papers</a>
+      <a class="btn" href="#challenge">Challenge</a>
+      <a class="btn btn-ghost" href="https://openreview.net/" target="_blank" rel="noopener">OpenReview&nbsp;&#8599;</a>
+    </div>
+
+    <figure class="hero-figure" aria-hidden="true">
+      <svg viewBox="0 0 1000 130" preserveAspectRatio="none">
+        <line x1="0" y1="118" x2="1000" y2="118" class="fig-axis"/>
+        <path class="fig-curve" d="M0,112 L90,112 L90,98 L175,98 L175,104 L235,104 L235,84 L330,84 L330,90 L385,90 L385,68 L480,68 L480,74 L540,74 L540,52 L645,52 L645,58 L700,58 L700,38 L800,38 L800,44 L855,44 L855,22 L1000,22"/>
+        <circle class="fig-dot" cx="90" cy="98" r="4"/>
+        <circle class="fig-dot" cx="235" cy="84" r="4"/>
+        <circle class="fig-dot" cx="385" cy="68" r="4"/>
+        <circle class="fig-dot" cx="540" cy="52" r="4"/>
+        <circle class="fig-dot" cx="700" cy="38" r="4"/>
+        <circle class="fig-dot" cx="855" cy="22" r="4"/>
+      </svg>
+      <figcaption>
+        <span>t&#8320;&nbsp;=&nbsp;deployment</span>
+        <span>capability, still improving &#8599;</span>
+      </figcaption>
+    </figure>
+  </header>
+
+  <!-- ======================= TICKER ======================= -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Test-Time Adaptation &#10035; Continual Learning &#10035; LLM Agents &#10035; Memory &amp; Consolidation &#10035; Embodied AI &#10035; World Models &#10035; Lifelong Learning &#10035; Meta-Learning &#10035; Intrinsic Motivation &#10035; Cognitive Architectures &#10035; Self-Improving Agents &#10035; Catastrophic Forgetting &#10035; Long-Horizon Evaluation &#10035; Safe Adaptation &#10035;&nbsp;</span>
+      <span>Test-Time Adaptation &#10035; Continual Learning &#10035; LLM Agents &#10035; Memory &amp; Consolidation &#10035; Embodied AI &#10035; World Models &#10035; Lifelong Learning &#10035; Meta-Learning &#10035; Intrinsic Motivation &#10035; Cognitive Architectures &#10035; Self-Improving Agents &#10035; Catastrophic Forgetting &#10035; Long-Horizon Evaluation &#10035; Safe Adaptation &#10035;&nbsp;</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ======================= ABOUT ======================= -->
+    <section id="about" class="section">
+      <header class="section-head">
+        <span class="section-no">01</span>
+        <h2>About the Workshop</h2>
+      </header>
+      <div class="section-body prose has-dropcap">
+        <p>
+          The rapid progress of Large Language Models (LLMs) has produced systems with remarkable
+          capabilities in language understanding, reasoning, programming, and tool use, while advances in
+          post-training, reinforcement learning, retrieval-augmented generation, and agentic scaffolding now
+          let agents tackle complex tasks in coding, web navigation, scientific discovery, and embodied
+          control. Yet today's frontier models remain largely <em>static</em>: after costly pre- and
+          post-training, their knowledge, skills, and reasoning are mostly fixed, and once deployed they
+          adapt through prompting, retrieval, memory, or external tools rather than genuine internal
+          learning and consolidation.
+        </p>
+        <p>
+          This contrasts sharply with human intelligence, where people continuously acquire knowledge,
+          refine representations, and reorganize beliefs through interaction. Current LLMs and embodied
+          agents instead cannot <strong>continually learn at test time</strong>: they struggle to internalize
+          new information after deployment, fail to improve from repeated mistakes, and can forget prior
+          skills when updated naively (catastrophic forgetting).
+        </p>
+        <p>
+          The NeurIPS 2026 Workshop on <strong>Towards Test-Time Continual Learning Agents (TTCL)</strong>
+          brings together researchers across continual learning, large language models, reinforcement
+          learning, embodied AI, memory systems, cognitive science, robotics, and multimodal learning.
+          We define <strong>Test-Time Continual Learning Agents</strong> as AI systems that continuously
+          acquire, consolidate, and refine knowledge and capabilities during deployment, without
+          catastrophic forgetting or repeated large-scale retraining. This goes beyond updating facts: it
+          asks how agents improve perception, reasoning, planning, exploration, skill acquisition, and
+          long-term decision-making through ongoing experience in virtual and physical
+          worlds&mdash;capabilities especially important for robotics, scientific discovery, personalized
+          assistants, education, healthcare, and human&ndash;AI collaboration.
+        </p>
+
+        <blockquote class="vision">
+          Our central vision is to catalyze progress toward next&#8209;generation cognitive agents that
+          <em>learn continually at test time, consolidate experience over long horizons, improve through
+          interaction, and remain reliable in dynamic physical and virtual worlds</em> — rethinking the
+          boundaries between training and inference, memory and learning, and adaptation and reasoning.
+        </blockquote>
+
+        <h3>Core questions</h3>
+        <ol class="qa-list">
+          <li>What does it mean for an agent to truly <em>learn at test time</em>, beyond retrieval and prompting?</li>
+          <li>What memory, consolidation, exploration, and self-reflection mechanisms enable scalable test-time continual learning without catastrophic forgetting?</li>
+          <li>How do we evaluate such learning and ensure its safety and robustness across long horizons and open-ended, multimodal settings?</li>
+        </ol>
+
+        <h3>What the workshop will do</h3>
+        <div class="goal-grid">
+          <div class="goal">
+            <span class="goal-no">i.</span>
+            <p>Convene experts across ML, continual learning, NLP, RL, robotics, cognitive science, multimodal learning, and AI safety.</p>
+          </div>
+          <div class="goal">
+            <span class="goal-no">ii.</span>
+            <p>Solicit work spanning lifelong and online learning, test-time adaptation, meta-learning, intrinsic motivation, cognitive architectures, and self-improving agents.</p>
+          </div>
+          <div class="goal">
+            <span class="goal-no">iii.</span>
+            <p>Promote rigorous benchmarks and evaluation protocols for long-horizon agent learning, including a hands-on community challenge.</p>
+          </div>
+          <div class="goal">
+            <span class="goal-no">iv.</span>
+            <p>Bridge the siloed LLM-agent, embodied-agent, continual-learning, and memory communities around shared terminology and open problems.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= CFP ======================= -->
+    <section id="cfp" class="section">
+      <header class="section-head">
+        <span class="section-no">02</span>
+        <h2>Call for Papers</h2>
+      </header>
+      <div class="section-body prose">
+        <p>
+          We invite contributions at the intersection of <strong>test-time learning, continual learning, and
+          agentic AI</strong> — including lifelong and online learning, test-time adaptation, meta-learning,
+          memory and consolidation, intrinsic motivation and exploration, cognitive architectures,
+          world models, embodied agents, evaluation and benchmarks, and the safety and robustness of
+          self-improving agents.
+        </p>
+        <p>
+          Submissions are managed via <a href="https://openreview.net/" target="_blank" rel="noopener">OpenReview</a>.
+          The workshop is <strong>non-archival</strong>; accepted papers will be made publicly available on
+          OpenReview. Papers should use the NeurIPS 2026 style (page limits exclude references and appendices).
+        </p>
+
+        <h3>Submission tracks</h3>
+        <ul class="track-list">
+          <li>
+            <div class="track-name">Research<span class="track-pages">6–9 pp.</span></div>
+            <p>Novel frameworks, empirical studies, or algorithmic advances at the test-time &times; continual &times; agentic intersection.</p>
+          </li>
+          <li>
+            <div class="track-name">Benchmark<span class="track-pages">6–9 pp.</span></div>
+            <p>New benchmarks, datasets, or simulation environments to evaluate such research.</p>
+          </li>
+          <li>
+            <div class="track-name">Position &amp; Review<span class="track-pages">4–6 pp.</span></div>
+            <p>Position papers and reviews of the challenges, principles, or ethical considerations spanning these areas.</p>
+          </li>
+          <li>
+            <div class="track-name">Demo<span class="track-pages">4–6 pp.</span></div>
+            <p>Demonstrations of working systems, their technical foundations and implications.</p>
+          </li>
+        </ul>
+
+        <h3>Awards</h3>
+        <p>Thanks to the generous sponsorship of <a href="https://lambda.ai" target="_blank" rel="noopener">Lambda</a>, the workshop will present:</p>
+        <ul class="award-list">
+          <li><strong>Best Paper Award</strong><span class="award-amt">$3,000 compute credits</span></li>
+          <li><strong>Two Runner-up Awards</strong><span class="award-amt">$1,500 compute credits each</span></li>
+          <li><strong>Every accepted paper</strong><span class="award-amt">$400 compute credits</span></li>
+        </ul>
+        <p class="aside">
+          Awards recognize the strongest contributions to the workshop.
+        </p>
+
+        <h3>Originality &amp; overlap policy</h3>
+        <p>
+          All submissions must be <strong>original and non-archival</strong>. Papers accepted or published at an
+          archival venue (including the NeurIPS 2026 main conference) will be desk-rejected. An originality
+          confirmation is required on OpenReview, and submissions will be screened against NeurIPS proceedings and
+          other archival venues for significant overlap. Per NeurIPS policy, organizers and anyone with a personal
+          conflict of interest with an organizer will not submit papers to TTCL 2026, and reviewing follows the
+          <a href="https://neurips.cc/public/guides/ConflictsOfInterest" target="_blank" rel="noopener">NeurIPS conflict-of-interest guidelines</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================= DATES ======================= -->
+    <section id="dates" class="section">
+      <header class="section-head">
+        <span class="section-no">03</span>
+        <h2>Important Dates</h2>
+      </header>
+      <div class="section-body">
+        <ul class="dates-list">
+          <li>
+            <span class="date-when">Jul 15, 2026</span>
+            <span class="date-what">Submissions open</span>
+          </li>
+          <li class="date-key">
+            <span class="date-when">Sep 1, 2026</span>
+            <span class="date-what"><strong>Submission deadline</strong></span>
+          </li>
+          <li>
+            <span class="date-when">Sep 22, 2026</span>
+            <span class="date-what">Notification of acceptance</span>
+          </li>
+          <li>
+            <span class="date-when">Oct 25, 2026</span>
+            <span class="date-what">Camera-ready versions due</span>
+          </li>
+          <li class="date-key">
+            <span class="date-when">Dec 12/13, 2026</span>
+            <span class="date-what"><strong>Workshop day</strong> at NeurIPS 2026, Atlanta — exact day TBA</span>
+          </li>
+        </ul>
+        <p class="aside">All deadlines are 11:59 PM, Anywhere on Earth (AoE).</p>
+      </div>
+    </section>
+
+    <!-- ======================= CHALLENGE ======================= -->
+    <section id="challenge" class="section">
+      <header class="section-head">
+        <span class="section-no">04</span>
+        <h2>Challenge — AgentOdyssey</h2>
+      </header>
+      <div class="section-body prose">
+        <p>
+          To turn the workshop's themes into measurable progress, TTCL 2026 hosts a community challenge on the
+          <strong>AgentOdyssey</strong> benchmark — open-ended, long-horizon text-game generation for test-time
+          continual learning agents.
+        </p>
+        <ul class="plain-list">
+          <li>Participants build novel agents, evaluated on a <strong>public leaderboard</strong> via the benchmark's automatic scoring.</li>
+          <li>Top-ranked agents will be recognized at the workshop.</li>
+          <li>The benchmark and its evaluation code are publicly released and permanently available, with deterministic scoring fixed once submissions close — a transparent, reproducible basis for comparison and a low barrier to entry for newcomers.</li>
+        </ul>
+        <p>
+          More details on how to participate and submit are <strong>coming soon</strong>.
+        </p>
+        <p class="aside">
+          Consistent with our conflict-of-interest policy, organizers, their students, and their postdocs may not compete.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================= SPEAKERS ======================= -->
+    <section id="speakers" class="section">
+      <header class="section-head">
+        <span class="section-no">05</span>
+        <h2>Invited Speakers</h2>
+      </header>
+      <div class="section-body">
+        <div class="people-grid">
+          <div class="person">
+            <div class="photo"><span class="initials">JW</span><img src="assets/img/jason-weston.jpg" alt="Jason Weston" loading="lazy" onerror="this.remove()"></div>
+            <h4>Jason Weston</h4>
+            <p>Meta</p>
+          </div>
+          <div class="person">
+            <div class="photo"><span class="initials">ML</span><img src="assets/img/manling-li.jpg" alt="Manling Li" loading="lazy" onerror="this.remove()"></div>
+            <h4>Manling Li</h4>
+            <p>Northwestern University</p>
+          </div>
+          <div class="person">
+            <div class="photo"><span class="initials">ZK</span><img src="assets/img/zsolt-kira.jpg" alt="Zsolt Kira" loading="lazy" onerror="this.remove()"></div>
+            <h4>Zsolt Kira</h4>
+            <p>Georgia Tech</p>
+          </div>
+          <div class="person">
+            <div class="photo"><span class="initials">YS</span><img src="assets/img/yu-su.jpg" alt="Yu Su" loading="lazy" onerror="this.remove()"></div>
+            <h4>Yu Su</h4>
+            <p>Ohio State University &amp; NeoCognition</p>
+          </div>
+          <div class="person">
+            <div class="photo"><span class="initials">KA</span><img src="assets/img/kelsey-allen.jpg" alt="Kelsey Allen" loading="lazy" onerror="this.remove()"></div>
+            <h4>Kelsey Allen</h4>
+            <p>University of British Columbia</p>
+          </div>
+          <div class="person">
+            <div class="photo"><span class="initials">CS</span><img src="assets/img/cansu-sancaktar.png" alt="Cansu Sancaktar" loading="lazy" onerror="this.remove()"></div>
+            <h4>Cansu Sancaktar</h4>
+            <p>Max Planck Institute for Intelligent Systems</p>
+          </div>
+          <div class="person">
+            <div class="photo"><span class="initials">SR</span><img src="assets/img/sebastian-risi.jpg" alt="Sebastian Risi" loading="lazy" onerror="this.remove()"></div>
+            <h4>Sebastian Risi</h4>
+            <p>IT University of Copenhagen</p>
+          </div>
+          <div class="person">
+            <div class="photo"><span class="initials">JD</span><img src="assets/img/jiafei-duan.jpg" alt="Jiafei Duan" loading="lazy" onerror="this.remove()"></div>
+            <h4>Jiafei Duan</h4>
+            <p>University of Washington (incoming, NUS)</p>
+          </div>
+        </div>
+
+        <h3 class="sub-head">Invited Panelists</h3>
+        <div class="people-grid">
+          <div class="person">
+            <div class="photo"><span class="initials">CM</span><img src="assets/img/christopher-maclellan.jpg" alt="Christopher MacLellan" loading="lazy" onerror="this.remove()"></div>
+            <h4>Christopher MacLellan</h4>
+            <p>Georgia Tech</p>
+          </div>
+          <div class="person">
+            <div class="photo"><span class="initials">CF</span><img src="assets/img/chelsea-finn.jpg" alt="Chelsea Finn" loading="lazy" onerror="this.remove()"></div>
+            <h4>Chelsea Finn <sup class="tbc">TBC</sup></h4>
+            <p>Stanford University &amp; Physical Intelligence</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= SCHEDULE ======================= -->
+    <section id="schedule" class="section">
+      <header class="section-head">
+        <span class="section-no">06</span>
+        <h2>Schedule</h2>
+      </header>
+      <div class="section-body prose">
+        <p>
+          The workshop runs in person from <strong>8:45 AM to 5:35 PM</strong> local time. Invited talks are kept
+          brief (25 minutes including Q&amp;A), with substantial time reserved for contributed spotlights, poster
+          sessions, a moderated discussion, a breakout/networking session, and a panel. A detailed program with
+          session topics, talk titles, and speakers will be posted before the workshop; the outline below is tentative.
+        </p>
+        <div class="table-wrap">
+          <table class="schedule">
+            <tbody>
+              <tr><td>08:45</td><td>Welcome &amp; Opening</td></tr>
+              <tr><td>09:00</td><td>Invited Talk 1</td></tr>
+              <tr><td>09:25</td><td>Invited Talk 2</td></tr>
+              <tr><td>09:50</td><td>Moderated Discussion</td></tr>
+              <tr class="break"><td>10:05</td><td>Poster Session &amp; Coffee A</td></tr>
+              <tr><td>10:35</td><td>Invited Talk 3</td></tr>
+              <tr><td>11:00</td><td>Invited Talk 4</td></tr>
+              <tr><td>11:25</td><td>Contributed Spotlights 1 &middot; 3 &times; 15 min</td></tr>
+              <tr class="break"><td>12:10</td><td>Lunch Break</td></tr>
+              <tr><td>13:10</td><td>Invited Talk 5</td></tr>
+              <tr><td>13:35</td><td>Invited Talk 6</td></tr>
+              <tr><td>14:00</td><td>Contributed Spotlights 2 &middot; 3 &times; 15 min</td></tr>
+              <tr class="break"><td>14:45</td><td>Poster Session &amp; Coffee B</td></tr>
+              <tr><td>15:15</td><td>Invited Talk 7</td></tr>
+              <tr><td>15:40</td><td>Invited Talk 8</td></tr>
+              <tr><td>16:05</td><td>Panel Discussion</td></tr>
+              <tr><td>16:55</td><td>Breakout &amp; Networking</td></tr>
+              <tr><td>17:20</td><td>Challenge Results, Awards &amp; Closing</td></tr>
+              <tr class="end"><td>17:35</td><td>End of workshop</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= ORGANIZERS ======================= -->
+    <section id="organizers" class="section">
+      <header class="section-head">
+        <span class="section-no">07</span>
+        <h2>Organizers</h2>
+      </header>
+      <div class="section-body">
+        <div class="people-grid">
+          <div class="person">
+            <a href="https://zheyuanzhang.me" target="_blank" rel="noopener">
+              <div class="photo"><span class="initials">ZZ</span><img src="assets/img/zheyuan-zhang.jpg" alt="Zheyuan Zhang" loading="lazy" onerror="this.remove()"></div>
+              <h4>Zheyuan "Brian" Zhang</h4>
+            </a>
+            <p>Ph.D. Student<br>Johns Hopkins University</p>
+          </div>
+          <div class="person">
+            <a href="https://chuanyangjin.com" target="_blank" rel="noopener">
+              <div class="photo"><span class="initials">CJ</span><img src="assets/img/chuanyang-jin.jpg" alt="Chuanyang Jin" loading="lazy" onerror="this.remove()"></div>
+              <h4>Chuanyang Jin</h4>
+            </a>
+            <p>Ph.D. Student<br>Johns Hopkins University</p>
+          </div>
+          <div class="person">
+            <a href="https://jhsansom.github.io/" target="_blank" rel="noopener">
+              <div class="photo"><span class="initials">JS</span><img src="assets/img/jacob-sansom.jpg" alt="Jacob Sansom" loading="lazy" onerror="this.remove()"></div>
+              <h4>Jacob Sansom</h4>
+            </a>
+            <p>Ph.D. Student<br>University of Michigan</p>
+          </div>
+          <div class="person">
+            <a href="https://ndrsn0208.github.io/" target="_blank" rel="noopener">
+              <div class="photo"><span class="initials">ZW</span><img src="assets/img/zekun-wang.jpg" alt="Zekun Wang" loading="lazy" onerror="this.remove()"></div>
+              <h4>Zekun Wang</h4>
+            </a>
+            <p>Ph.D. Candidate<br>Georgia Institute of Technology</p>
+          </div>
+          <div class="person">
+            <a href="http://www.stat.ucla.edu/~jxie/" target="_blank" rel="noopener">
+              <div class="photo"><span class="initials">JX</span><img src="assets/img/jianwen-xie.jpg" alt="Jianwen Xie" loading="lazy" onerror="this.remove()"></div>
+              <h4>Jianwen Xie</h4>
+            </a>
+            <p>Research Scientist<br>Lambda</p>
+          </div>
+          <div class="person">
+            <a href="https://web.eecs.umich.edu/~chaijy/" target="_blank" rel="noopener">
+              <div class="photo"><span class="initials">JC</span><img src="assets/img/joyce-chai.jpg" alt="Joyce Chai" loading="lazy" onerror="this.remove()"></div>
+              <h4>Joyce Chai</h4>
+            </a>
+            <p>Professor<br>University of Michigan</p>
+          </div>
+          <div class="person">
+            <a href="https://danielkhashabi.com/" target="_blank" rel="noopener">
+              <div class="photo"><span class="initials">DK</span><img src="assets/img/daniel-khashabi.jpg" alt="Daniel Khashabi" loading="lazy" onerror="this.remove()"></div>
+              <h4>Daniel Khashabi</h4>
+            </a>
+            <p>Assistant Professor<br>Johns Hopkins University</p>
+          </div>
+          <div class="person">
+            <a href="https://www.tshu.io/" target="_blank" rel="noopener">
+              <div class="photo"><span class="initials">TS</span><img src="assets/img/tianmin-shu.jpg" alt="Tianmin Shu" loading="lazy" onerror="this.remove()"></div>
+              <h4>Tianmin Shu</h4>
+            </a>
+            <p>Assistant Professor<br>Johns Hopkins University</p>
+          </div>
+        </div>
+
+        <h3 class="sub-head">Program Committee</h3>
+        <p class="pc-list">
+          Yifan Yin (JHU) &middot; Jianxin Wang (JHU) &middot; Binze Li (JHU) &middot; Suyu Ye (JHU) &middot;
+          Zehao Wen (JHU) &middot; Alvin Zhang (JHU) &middot; Anant Gupta (Georgia Tech) &middot;
+          Jung-Chun Liu (UMich) &middot; Creighton Glasscock (UCSC) &middot; Dingqiang Ye (JHU) &middot;
+          Tianjian Li (JHU) &middot; Chenlu Ye (UIUC) &middot; Zhoujun Cheng (UCSD) &middot;
+          Tong Cheng (UW) &middot; Zichun Yu (CMU) &middot; Seungone Kim (CMU) &middot;
+          Zhenning Yang (UMich) &middot; Ilya Kulikov (Meta) &middot; Swarnadeep Saha (Meta) &middot;
+          Shunchi Zhang (TikTok) &middot; Mung Yao Jia (UIUC) &middot; Xuhui Zhou (CMU) &middot;
+          Zhining Zhang (PKU) &middot; Yuyao Wang (UW) &middot; Junyan Liu (UW) &middot; Bo Liu (UW)
+        </p>
+
+        <h3 class="sub-head">Sponsor</h3>
+        <p class="prose">
+          We gratefully acknowledge <a href="https://lambda.ai" target="_blank" rel="noopener"><strong>Lambda</strong></a>
+          for sponsoring the workshop's paper awards and compute credits.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================= CONTACT ======================= -->
+    <section id="contact" class="section">
+      <header class="section-head">
+        <span class="section-no">08</span>
+        <h2>Contact</h2>
+      </header>
+      <div class="section-body prose">
+        <p>
+          For questions about the workshop, the call for papers, or the challenge, please email the organizers.
+        </p>
+        <p>
+          Live streaming and captioning will be provided for remote attendees.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer-mark">TTCL&#8202;/&#8202;2026</p>
+    <p class="footer-line">Towards Test-Time Continual Learning Agents &middot; NeurIPS 2026 Workshop &middot; Atlanta, GA</p>
+  </footer>
+
+</body>
+</html>
