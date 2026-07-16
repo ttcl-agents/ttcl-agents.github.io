@@ -1,14 +1,14 @@
-# TTCL 2026 — Towards Test-Time Continual Learning Agents
+# NeurIPS 2026 TTCL — Towards Test-Time Continual Learning Agents
 
-Website for the NeurIPS 2026 Workshop on **Towards Test-Time Continual Learning Agents (TTCL 2026)**, Atlanta, GA — December 12 or 13, 2026.
+Website for the **NeurIPS 2026 Workshop on Towards Test-Time Continual Learning Agents (TTCL)**, Atlanta, GA — December 12 or 13, 2026.
 
 Live site: https://ttcl-agents.github.io
 
 ## Structure
 
-- `index.html` — the full single-page site (about, CFP, dates, challenge, speakers, schedule, organizers, contact)
-- `assets/css/style.css` — styling (editorial/print look: Fraunces + Newsreader + IBM Plex Mono, warm paper palette)
-- `assets/img/` — speaker/organizer headshots, sourced from each person's homepage and downscaled to ≤600px. If an image is missing, the card falls back to initials automatically.
+- `index.html` — the full single-page site (about, CFP, dates, challenge, speakers, schedule, organizers, sponsor, contact)
+- `assets/css/style.css` — standard academic workshop styling (white background, navy/blue accents, Lato, circular headshots)
+- `assets/img/` — speaker/organizer headshots, sourced from each person's homepage and downscaled to ≤600px (falls back to initials if an image is missing), plus the Lambda sponsor logo (`lambda-logo.svg`, recolored dark from Lambda's official white SVG)
 
 ## Local preview
 
