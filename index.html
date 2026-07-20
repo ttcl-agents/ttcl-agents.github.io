@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NeurIPS 2026 TTCL Workshop: Towards Test-Time Continual Learning Agents</title>
-  <meta name="description" content="NeurIPS 2026 Workshop on Towards Test-Time Continual Learning Agents (TTCL). Agents that keep learning after deployment — uniting test-time, continual, and agentic learning. Atlanta, December 2026.">
+  <meta name="description" content="NeurIPS 2026 Workshop on Towards Test-Time Continual Learning Agents (TTCL). Agents that keep learning after deployment, uniting test-time, continual, and agentic learning. Atlanta, December 2026.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2214%22 fill=%22%23163a6b%22/><text x=%2250%22 y=%2270%22 font-size=%2254%22 font-family=%22Arial%22 font-weight=%22bold%22 text-anchor=%22middle%22 fill=%22white%22>T</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,15 +63,15 @@
           let agents tackle complex tasks in coding, web navigation, scientific discovery, and embodied
           control. Yet today's frontier models remain largely <em>static</em>: after costly pre- and
           post-training, their knowledge, skills, and reasoning are mostly fixed, and once deployed they
-          adapt through prompting, retrieval, memory, or external tools rather than genuine internal
-          learning and consolidation.
+          adapt through prompting, retrieval, or external tools rather than genuine internal
+          learning and memory consolidation.
         </p>
         <p>
           This contrasts sharply with human intelligence, where people continuously acquire knowledge,
           refine representations, and reorganize beliefs through interaction. Current LLMs and embodied
           agents instead cannot <strong>continually learn at test time</strong>: they struggle to internalize
           new information after deployment, fail to improve from repeated mistakes, and can forget prior
-          skills when updated naively (catastrophic forgetting).
+          knowledge and skills when updated naively (catastrophic forgetting).
         </p>
         <p>
           The <strong>NeurIPS 2026 Workshop on Towards Test-Time Continual Learning Agents (TTCL)</strong>
@@ -82,30 +82,15 @@
           catastrophic forgetting or repeated large-scale retraining. This goes beyond updating facts: it
           asks how agents improve perception, reasoning, planning, exploration, skill acquisition, and
           long-term decision-making through ongoing experience in virtual and physical
-          worlds&mdash;capabilities especially important for robotics, scientific discovery, personalized
+          worlds. These capabilities are especially important for robotics, scientific discovery, personalized
           assistants, education, healthcare, and human&ndash;AI collaboration.
         </p>
         <div class="callout">
           Our central vision is to catalyze progress toward <strong>next-generation cognitive agents</strong> that
           <em>learn continually at test time, consolidate experience over long horizons, improve through
-          interaction, and remain reliable in dynamic physical and virtual worlds</em> — rethinking the
-          boundaries between training and inference, memory and learning, and adaptation and reasoning.
+          interaction, and remain reliable in dynamic physical and virtual worlds</em>, rethinking the
+          boundaries between training and inference, memory and learning, adaptation and reasoning.
         </div>
-
-        <h3>Core Questions</h3>
-        <ul>
-          <li>What does it mean for an agent to truly <em>learn at test time</em>, beyond retrieval and prompting?</li>
-          <li>What memory, consolidation, exploration, and self-reflection mechanisms enable scalable test-time continual learning without catastrophic forgetting?</li>
-          <li>How do we evaluate such learning and ensure its safety and robustness across long horizons and open-ended, multimodal settings?</li>
-        </ul>
-
-        <h3>Goals</h3>
-        <ul>
-          <li>Convene experts across ML, continual learning, NLP, RL, robotics, cognitive science, multimodal learning, and AI safety.</li>
-          <li>Solicit work spanning lifelong and online learning, test-time adaptation, meta-learning, intrinsic motivation, cognitive architectures, and self-improving agents.</li>
-          <li>Promote rigorous benchmarks and evaluation protocols for long-horizon agent learning, including a hands-on community challenge.</li>
-          <li>Bridge the siloed LLM-agent, embodied-agent, continual-learning, and memory communities around shared terminology and open problems.</li>
-        </ul>
       </div>
     </section>
 
@@ -115,21 +100,36 @@
       <div class="content">
         <p>
           We invite contributions at the intersection of <strong>test-time learning, continual learning, and
-          agentic AI</strong> — including lifelong and online learning, test-time adaptation, meta-learning,
-          memory and consolidation, intrinsic motivation and exploration, cognitive architectures,
-          world models, embodied agents, evaluation and benchmarks, and the safety and robustness of
-          self-improving agents.
+          agentic AI</strong>. Relevant topics include (but are not limited to):
         </p>
+
+        <h3>Topics</h3>
+        <ul>
+          <li><strong>Test-time adaptation and learning.</strong> Test-time training and adaptation, online and
+            meta-learning, in-context and parameter-efficient fine-tuning, and self-improvement from environment
+            feedback and self-generated supervision.</li>
+          <li><strong>Continual learning without catastrophic forgetting.</strong> Regularization-, replay-,
+            optimization-, representation-, and architecture-based approaches to the stability&ndash;plasticity
+            trade-off, applied to LLMs and agents that must accumulate knowledge and skills across tasks.</li>
+          <li><strong>Memory and knowledge consolidation.</strong> Episodic and semantic memory architectures,
+            retrieval-augmented generation, and consolidation mechanisms that transform interaction trajectories
+            into persistent knowledge and reusable skills.</li>
+          <li><strong>Agents that learn from experience.</strong> LLM, embodied, and multimodal agents that improve
+            exploration, long-horizon planning, and skill acquisition from experience, including intrinsic
+            motivation, world models, and open-ended learning.</li>
+          <li><strong>Evaluation, safety, and robustness.</strong> Benchmarks and evaluation protocols for long-horizon
+            test-time continual learning, and the safety, robustness, and alignment of self-improving agents.</li>
+        </ul>
+
         <p>
-          Submissions are managed via <a href="https://openreview.net/" target="_blank" rel="noopener">OpenReview</a>.
-          The workshop is <strong>non-archival</strong>; accepted papers will be made publicly available on
-          OpenReview. Papers should use the NeurIPS 2026 style (page limits exclude references and appendices).
+          Submissions are managed via <a href="https://openreview.net/" target="_blank" rel="noopener">OpenReview</a>;
+          see the <a href="#guidelines">Submission Guidelines</a> below.
         </p>
 
         <h3>Submission Tracks</h3>
         <div class="track-grid">
           <div class="track">
-            <h4>General Research Track <span>6–9 pages</span></h4>
+            <h4>General Research Track <span>4–9 pages</span></h4>
             <p>Novel frameworks, empirical studies, algorithmic advances, benchmarks, position papers, or system demonstrations at the test-time &times; continual &times; agentic intersection.</p>
           </div>
           <div class="track">
@@ -141,21 +141,34 @@
         <h3>Awards</h3>
         <p>Thanks to the generous sponsorship of <a href="https://lambda.ai" target="_blank" rel="noopener">Lambda</a>, the workshop will present:</p>
         <ul>
-          <li><strong>Best Paper Award:</strong> $3,000 in compute credits — selected from <strong>all submitted papers across both tracks</strong> (General Research and Challenge)</li>
+          <li><strong>Best Paper Award:</strong> $3,000 in compute credits, selected from <strong>all submitted papers across both tracks</strong> (General Research and Challenge)</li>
           <li><strong>Two Runner-up Awards:</strong> $1,500 in compute credits each</li>
           <li><strong>Every accepted paper:</strong> $400 in compute credits</li>
-          <li><strong>Challenge Award:</strong> $500 in compute credits, open exclusively to Challenge Track submissions and announced at the workshop — see the <a href="#challenge">Challenge section</a> for eligibility and ranking rules</li>
+          <li><strong>Challenge Award:</strong> $500 in compute credits, open exclusively to Challenge Track submissions and announced at the workshop; see the <a href="#challenge">Challenge section</a> for eligibility and ranking rules</li>
         </ul>
         <p class="note">Awards recognize the strongest contributions to the workshop.</p>
 
-        <h3>Originality &amp; Overlap Policy</h3>
+        <h3 id="guidelines">Submission Guidelines</h3>
         <p>
-          All submissions must be <strong>original and non-archival</strong>. Papers accepted or published at an
-          archival venue (including the NeurIPS 2026 main conference) will be desk-rejected. An originality
-          confirmation is required on OpenReview, and submissions will be screened against NeurIPS proceedings and
-          other archival venues for significant overlap. Per NeurIPS policy, organizers and anyone with a personal
-          conflict of interest with an organizer will not submit papers to TTCL, and reviewing follows the
-          <a href="https://neurips.cc/public/guides/ConflictsOfInterest" target="_blank" rel="noopener">NeurIPS conflict-of-interest guidelines</a>.
+          <strong>Formatting.</strong> Submissions must be in English, follow the NeurIPS 2026 LaTeX template, and be
+          submitted as a single PDF via <a href="https://openreview.net/" target="_blank" rel="noopener">OpenReview</a>.
+          The page limits above apply to the main text; references and appendices are not included in the page limit,
+          but the main text must be self-contained, and reviewers are not required to read beyond it. Submissions
+          exceeding the page limit will be desk-rejected.
+        </p>
+        <p>
+          <strong>Anonymity.</strong> The workshop follows a double-blind review process. Submissions must be
+          anonymized by removing author names, affiliations, and acknowledgments. Prior work should be cited in the
+          third person, and identifying information, including in supplementary materials, must be omitted. Reviewing
+          follows the <a href="https://neurips.cc/public/guides/ConflictsOfInterest" target="_blank" rel="noopener">NeurIPS
+          conflict-of-interest guidelines</a>, and organizers will not submit papers to TTCL.
+        </p>
+        <p>
+          <strong>Dual Submission &amp; Non-Archival Policy.</strong> The workshop is <strong>non-archival</strong>:
+          we welcome submissions that are under review at, or have been accepted by, other venues. Papers already
+          accepted to the NeurIPS 2026 main conference will undergo an expedited review process primarily evaluating
+          their relevance to the workshop themes. Accepted papers will be made publicly available on OpenReview, and
+          all accepted papers will be presented in a poster session.
         </p>
       </div>
     </section>
@@ -183,32 +196,41 @@
       <div class="content">
         <p>
           To turn the workshop's themes into measurable progress, TTCL hosts a community challenge on the
-          <strong>AgentOdyssey</strong> benchmark — open-ended, long-horizon text-game generation for test-time
+          <a href="https://github.com/agentodyssey/agentodyssey" target="_blank" rel="noopener"><strong>AgentOdyssey</strong></a>
+          benchmark: open-ended, long-horizon text-game generation for test-time
           continual learning agents.
         </p>
         <ul>
           <li>Participants build novel agents, evaluated on a <strong>public leaderboard</strong> via the benchmark's automatic scoring.</li>
           <li>Top-ranked agents will be recognized at the workshop.</li>
-          <li>The benchmark and its evaluation code are publicly released and permanently available, with deterministic scoring fixed once submissions close — a transparent, reproducible basis for comparison and a low barrier to entry for newcomers.</li>
+          <li>The benchmark and its evaluation code are publicly released and permanently available, with deterministic scoring fixed once submissions close, providing a transparent, reproducible basis for comparison and a low barrier to entry for newcomers.</li>
         </ul>
 
         <h3>How to Participate</h3>
         <ul>
           <li>Submit a paper to the <strong>Challenge Track</strong> of the <a href="#cfp">Call for Papers</a>. Two formats are welcome: a <strong>general research paper</strong> that includes AgentOdyssey benchmark results, or a <strong>technical report</strong> describing your agent implemented for AgentOdyssey evaluation.</li>
-          <li>Submission to the Challenge Track is <strong>required</strong> to compete for the Challenge Award — a general research paper submitted to the General Research Track is not eligible, even if it reports AgentOdyssey results.</li>
+          <li>Submission to the Challenge Track is <strong>required</strong> to compete for the Challenge Award; a general research paper submitted to the General Research Track is not eligible, even if it reports AgentOdyssey results.</li>
           <li>Challenge Track papers remain eligible for the Best Paper Award, which is selected from all papers submitted across both tracks.</li>
         </ul>
 
         <h3>Evaluation &amp; Ranking</h3>
         <ul>
+          <li>Final rankings are computed on the <strong>'remnant'</strong> game from
+            <a href="https://github.com/agentodyssey/agentodyssey" target="_blank" rel="noopener">AgentOdyssey</a>, ranked by
+            <strong>game progress</strong>: game progress is measured by the <strong>main quest reward</strong>, with total
+            <strong>supplementary reward</strong> used as a tiebreaker. You may report results on other AgentOdyssey games in
+            your paper, but the ranking uses 'remnant'.</li>
           <li>To ensure a fair comparison, final rankings are based on performance with the <strong>Qwen3-4B</strong> backbone language model. You are welcome to additionally evaluate other backbones in your paper, but <strong>only Qwen3-4B results count toward the final rankings</strong>.</li>
           <li><strong>Code must be submitted alongside the paper.</strong> The top 3 solutions will be verified by the workshop organizers before final rankings are confirmed.</li>
           <li>The <strong>Challenge Award ($500 in compute credits)</strong> will be announced at the workshop.</li>
         </ul>
 
-        <p><strong>More details on how to participate and submit are coming soon.</strong></p>
-        <p class="note">
-          Consistent with our conflict-of-interest policy, organizers, their students, and their postdocs may not compete.
+        <h3>Getting Started</h3>
+        <p>
+          To implement your agent and evaluate it, see the
+          <a href="https://github.com/agentodyssey/agentodyssey" target="_blank" rel="noopener">AgentOdyssey GitHub repository</a>
+          and the <a href="https://agentodyssey.github.io/docs" target="_blank" rel="noopener">documentation website</a>,
+          which cover the agent interface, the available baselines, and how to run the evaluation.
         </p>
       </div>
     </section>
@@ -375,20 +397,6 @@
           <p>Assistant Professor<br>Johns Hopkins University</p>
         </div>
       </div>
-
-      <h2 class="h2-follow">Program Committee</h2>
-      <div class="content">
-        <p class="pc-list">
-          Yifan Yin (JHU) &middot; Jianxin Wang (JHU) &middot; Binze Li (JHU) &middot; Suyu Ye (JHU) &middot;
-          Zehao Wen (JHU) &middot; Alvin Zhang (JHU) &middot; Anant Gupta (Georgia Tech) &middot;
-          Jung-Chun Liu (UMich) &middot; Creighton Glasscock (UCSC) &middot; Dingqiang Ye (JHU) &middot;
-          Tianjian Li (JHU) &middot; Chenlu Ye (UIUC) &middot; Zhoujun Cheng (UCSD) &middot;
-          Tong Cheng (UW) &middot; Zichun Yu (CMU) &middot; Seungone Kim (CMU) &middot;
-          Zhenning Yang (UMich) &middot; Ilya Kulikov (Meta) &middot; Swarnadeep Saha (Meta) &middot;
-          Shunchi Zhang (TikTok) &middot; Mung Yao Jia (UIUC) &middot; Xuhui Zhou (CMU) &middot;
-          Zhining Zhang (PKU) &middot; Yuyao Wang (UW) &middot; Junyan Liu (UW) &middot; Bo Liu (UW)
-        </p>
-      </div>
     </section>
 
     <!-- ======================= SPONSOR ======================= -->
@@ -411,11 +419,7 @@
       <div class="content">
         <p>
           For questions about the workshop, the call for papers, or the challenge, please email the organizers.
-        </p>
-        <p>
-          Live streaming and captioning will be provided for remote attendees.
-        </p>
-      </div>
+        </p>      </div>
     </section>
 
   </main>
