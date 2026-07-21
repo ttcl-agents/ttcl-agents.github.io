@@ -153,6 +153,10 @@ a:hover { text-decoration: underline; text-decoration-color: var(--maroon); }
   font-style: italic;
 }
 .note { font-size: 0.88rem; color: var(--ink-faint); font-style: italic; }
+code {
+  font-family: "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.85em;
+}
 
 .callout {
   border-left: 3px solid var(--maroon);
