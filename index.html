@@ -211,11 +211,12 @@
 
         <h3>Evaluation &amp; Ranking</h3>
         <ul>
-          <li>Final rankings are computed on the <strong>'remnant'</strong> game from
-            <a href="https://github.com/agentodyssey/agentodyssey" target="_blank" rel="noopener">AgentOdyssey</a>, ranked by
-            <strong>game progress</strong>: game progress is measured by the <strong>main quest reward</strong>, with total
+          <li>Final rankings are computed as the <strong>average over three games</strong> from
+            <a href="https://github.com/agentodyssey/agentodyssey" target="_blank" rel="noopener">AgentOdyssey</a> —
+            <strong>'remnant'</strong>, <strong>'mark'</strong>, and <strong>'metropolis'</strong> — ranked by average
+            <strong>game progress</strong>: game progress is measured by the <strong>main quest reward</strong>, with average total
             <strong>supplementary reward</strong> used as a tiebreaker. You may report results on other AgentOdyssey games in
-            your paper, but the ranking uses 'remnant'.</li>
+            your paper, but the ranking uses these three games.</li>
           <li>To ensure a fair comparison, final rankings are based on performance with either the
             <strong><a href="https://huggingface.co/Qwen/Qwen3-4B" target="_blank" rel="noopener">Qwen3-4B</a></strong> or the
             <strong><a href="https://huggingface.co/Qwen/Qwen3.5-4B" target="_blank" rel="noopener">Qwen3.5-4B</a></strong>
@@ -224,7 +225,7 @@
             toward the final rankings</strong>.</li>
           <li>Since each AgentOdyssey-generated game is designed to evaluate test-time learning,
             <strong>pre-training on AgentOdyssey-generated games is not allowed</strong>, even on games other than
-            'remnant'. Model training on other datasets and benchmarks such as ALFWorld, ScienceWorld, and WebShop
+            the three ranking games. Model training on other datasets and benchmarks such as ALFWorld, ScienceWorld, and WebShop
             is permitted, for example if your research involves meta-learning.</li>
           <li>The maximum number of environment steps must be set to <strong><code>max_steps</code> = 500</strong>.</li>
           <li>There is <strong>no public leaderboard during the submission period</strong>: rankings are based on the
