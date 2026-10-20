@@ -6,7 +6,7 @@ Live site: https://ttcl-agents.github.io
 
 ## Structure
 
-- `index.html` — the full single-page site (about, CFP, dates, challenge cancellation notice, speakers, schedule, organizers, sponsor, contact)
+- `index.html` — the full single-page site (about, CFP, dates, speakers, schedule, organizers, sponsor, contact)
 - `assets/css/style.css` — standard academic workshop styling (white background, navy/blue accents, Lato, circular headshots)
 - `assets/img/` — speaker/organizer headshots, sourced from each person's homepage and downscaled to ≤600px (falls back to initials if an image is missing), plus the Lambda sponsor logo (`lambda-logo.svg`, recolored dark from Lambda's official white SVG)
 
